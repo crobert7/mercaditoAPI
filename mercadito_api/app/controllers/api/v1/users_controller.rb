@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :set_user, only: %i[show update]
+  before_action :set_user, only: %i[show update destroy]
 
   #Get /users/v1
   def show
@@ -43,6 +43,14 @@ class Api::V1::UsersController < ApplicationController
 
   end
 
+  #Delete /users/1
+
+  def destroy
+
+    @user.destroy
+    head 204
+
+  end
 
   private
 
