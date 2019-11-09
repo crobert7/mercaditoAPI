@@ -17,3 +17,13 @@ class JSONWebToken
   end
 
 end
+
+module MercaditoAPI
+
+  class Application < Rails::Application
+
+    config.autoload_paths << Rails.root.join('lib')
+
+  end
+
+end
