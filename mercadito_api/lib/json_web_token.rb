@@ -1,4 +1,4 @@
-class JSONWebToken
+class JsonWebToken
 
   SECRET_KEY = Rails.application.secrets.secret_key_base.to_s
 
@@ -13,16 +13,6 @@ class JSONWebToken
 
     decoded = JWT.decode(token, SECRET_KEY).first
     HashWithIndifferentAccess.new decoded
-
-  end
-
-end
-
-module MercaditoAPI
-
-  class Application < Rails::Application
-
-    config.autoload_paths << Rails.root.join('lib')
 
   end
 
